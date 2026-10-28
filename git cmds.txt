@@ -1,0 +1,55 @@
+git -- version
+git config --global user.name "...."
+git config --global user.email "..."
+to create a repo
+cd deskstop
+mkdir practical
+cd practical
+git init
+git status
+
+create afile named hello.txt
+echo hello git> hello.txt
+git status
+git add hello.txt
+git status
+git commit -m "first commit"
+
+
+echo this is my second line>> hello.txt
+git diff
+
+git add hello.txt
+git diff --staged
+
+git commit -m "add second line"
+
+git branch
+git branch -M main
+
+to create a new branch
+git branch feature
+git switch feature
+
+echo this is added in feature branch.>> hello.txt
+git add hello.txt
+git commit -m "add feature line"
+
+return to main branch
+git switch main
+
+to merge them
+git merge feature
+
+to push
+git remote add origin <url of ur repo>
+git remote -v
+git push -u origin main
+
+to pull
+in practical repo add file README.md and enter some text
+commit the new file to main
+
+git switch main
+git pull origin main
+git status
