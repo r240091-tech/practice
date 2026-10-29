@@ -77,7 +77,7 @@ def lambda_handler(event, context):
         }
  test json with-
 {
-  "body": "{\"name\":\"Iffat\",\"email\":\"iffat@example.com\",\"phone\":\"9876543210\"}"
+  "body": "{\"name\":\"Samiya\",\"email\":\"samiya@example.com\",\"phone\":\"88********\"}"
 }
 
 
