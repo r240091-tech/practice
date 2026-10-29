@@ -1,0 +1,43 @@
+in git repo add file...create file jenkinsfile
+
+
+
+
+pipeline {
+    agent any
+
+    triggers {
+        pollSCM('H/5 * * * *')
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the project...'
+                bat 'echo Build successful'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Testing the project...'
+                bat 'echo All tests passed'
+            }
+        }
+
+        stage('Finish') {
+            steps {
+                echo 'Continuous Integration completed!'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully.'
+        }
+        failure {
+            echo 'Pipeline failed. Check the console output.'
+        }
+    }
+}
